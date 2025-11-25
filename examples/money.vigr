@@ -1,0 +1,28 @@
+§ com.vigr.money
+
+◂ io
+
+⌘ Wallet {
+  ∷🔓 eth = 0≋18   # exact Ethereum (wei units)
+  ∷🔓 btc = 0↧8    # Bitcoin sats, always floor
+  ∷🔓 usd = 0≈2    # classic fiat, half-up
+}
+
+λ main() {
+  ∷🔓 wallet = Wallet()
+
+  wallet.eth = 1.337
+  wallet.btc = 0.00042069
+  wallet.usd = 69.420
+
+  io.print("ETH: " .+ wallet.eth)
+  io.print("BTC: " .+ wallet.btc)
+  io.print("USD: $" .+ wallet.usd)
+
+  wallet.eth += 0.000000000000000001  # 1 wei tip — exact
+  io.print("ETH after tip: " .+ wallet.eth)
+}
+
+⏳ run() {
+  main()
+}
