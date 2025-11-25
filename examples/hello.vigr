@@ -2,23 +2,9 @@
 
 ◂ io
 
-⌘ Wallet {
-  ∷🔓 eth = 0≋18
-  ∷🔓 usd = 0≈2
-}
-
 λ main() {
-  io.print("Hello, VIGR! Where every decimal meets its fate.")
-
-  ∷🔓 wallet = Wallet()
-  wallet.eth = 1.337  // Exactly 1337000000000000000 wei
-  wallet.usd = 42.99
-
-  io.print("ETH: " .+ wallet.eth)
-  io.print("USD: " .+ wallet.usd)
-
-  wallet.eth += 0.000000000000000001  // Adds 1 wei, exact
-  io.print("ETH after tip: " .+ wallet.eth)
+  io.print("Hello, VIGR — Verifiable Immutable Glyphic Resolute")
+  io.print("Where every decimal meets its fate.")
 }
 
 ⏳ run() {
